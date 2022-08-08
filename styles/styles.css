@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.calculator-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10rem 0rem;
+}
+.buttons-container{
+    width: 80%;
+}
+.calculator-item{
+    text-align: center;
+    padding-top: 1.5rem;
+    background-color: lightgray;
+}
+.operation{
+
+    background-color: lightcoral;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.dark-light-mode{
+    width: 10em;
+    height: 5em;
+    text-align: center;
+    padding-top: 3em;
+}
+.mode{
+    font-size: 60px;
+}
+.fa-moon{
+    display: block;
+}
+.fa-sun{
+    display: none;
+}
