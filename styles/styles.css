@@ -17,6 +17,14 @@
     padding-top: 1.5rem;
     background-color: lightgray;
 }
+/*.input-box{
+    height: 50px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.input-div{
+    margin-top: 0;
+}*/
 .operation{
 
     background-color: lightcoral;

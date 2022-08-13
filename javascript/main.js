@@ -5,6 +5,9 @@ var darkLightMode=document.querySelector(".dark-light-mode")
 var lightIcon= document.querySelector(".light")
 var darkIcon= document.querySelector(".darkM")
 var allButtons=document.querySelectorAll(".DLM")
+var clearBtn=document.querySelector(".clear-button");
+var deleteBtn=document.querySelector(".delete-button");
+var inputBox= document.querySelector(".input-box");
 var num1=0
 var num11=0
 var num2=0
@@ -12,14 +15,13 @@ var sign=null
 var sum
 console.log("num1"+num1);
 console.log("num2"+num2);
-var clearBtn=document.querySelector(".clear-button");
 
 
-number.forEach((number1)=>{
+/*number.forEach((number1)=>{
 number1.addEventListener("click",(num)=>{
     if(sign==null){
     console.log(number1);
-/*num1=num.target.dataset.number;*/
+//num1=num.target.dataset.number;
 num1 += number1.innerHTML
 myResult.innerHTML =+ num1
 console.log("num11"+"  "+num11);
@@ -71,10 +73,10 @@ num.target.dataset.number
     })
 
 
-})
+})*/
 
 
-myOperation.forEach((oprt)=>{
+/*myOperation.forEach((oprt)=>{
     oprt.addEventListener("click",(att)=>{
         if(oprt.innerHTML== "="){
             sign= oprt.innerHTML
@@ -92,12 +94,52 @@ myOperation.forEach((oprt)=>{
         }
         
     })
+})*/
+
+
+number.forEach((num)=>{
+
+num.addEventListener("click",()=>{
+
+    inputBox.value += num.innerHTML
+    console.log(inputBox.value)
+    console.log(num.innerHTML)
+})
+    
+})
+
+
+
+myOperation.forEach((oprt)=>{
+    oprt.addEventListener("click",(att)=>{
+        if(oprt.innerHTML== "="){
+            console.log(eval(inputBox.value))
+            myResult.innerHTML=eval(inputBox.value)
+        }else{
+            sign= oprt.innerHTML
+            console.log(sign); 
+            inputBox.value += sign;  
+            
+            
+        }
+        
+    })
 })
 
 
 clearBtn.addEventListener("click",()=>{
     num1=num2=0
     myResult.innerHTML=null
+    inputBox.value=null
+
+})
+
+deleteBtn.addEventListener("click",()=>{
+
+    myResult.innerHTML=null
+    inputBox.value=inputBox.value.slice(0,-1)
+    console.log("delete")
+    console.log(typeof(myResult.innerHTML))
 
 })
 
