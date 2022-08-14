@@ -48,3 +48,12 @@
 .fa-sun{
     display: none;
 }
+.input-box{
+    height: 50px;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    width: 100%;
+}
+.input-div{
+    margin-top: 0;
+}

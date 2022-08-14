@@ -1,5 +1,6 @@
 var number= document.querySelectorAll(".number-button");
-var myOperation= document.querySelectorAll(".operation-button");
+/*var myOperation= document.querySelectorAll(".operation-button");*/
+var myOperation= document.querySelectorAll(".operation");
 var myResult=document.querySelector(".result-box")
 var darkLightMode=document.querySelector(".dark-light-mode")
 var lightIcon= document.querySelector(".light")
@@ -15,6 +16,7 @@ var sign=null
 var sum
 console.log("num1"+num1);
 console.log("num2"+num2);
+console.log(inputBox.value);
 
 
 /*number.forEach((number1)=>{
@@ -99,11 +101,12 @@ num.target.dataset.number
 
 number.forEach((num)=>{
 
-num.addEventListener("click",()=>{
+num.addEventListener("click",(att)=>{
 
-    inputBox.value += num.innerHTML
+    inputBox.value += att.target.dataset.number
     console.log(inputBox.value)
     console.log(num.innerHTML)
+    console.log(att.target.dataset.number)
 })
     
 })
@@ -112,11 +115,11 @@ num.addEventListener("click",()=>{
 
 myOperation.forEach((oprt)=>{
     oprt.addEventListener("click",(att)=>{
-        if(oprt.innerHTML== "="){
+        if(att.target.dataset.number== "="){
             console.log(eval(inputBox.value))
             myResult.innerHTML=eval(inputBox.value)
         }else{
-            sign= oprt.innerHTML
+            sign= att.target.dataset.number
             console.log(sign); 
             inputBox.value += sign;  
             
