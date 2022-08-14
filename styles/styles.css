@@ -32,13 +32,16 @@
 .dark{
     background-color: black;
     color: white;
+    border: white;
+    border: solid 1px;
+    opacity: 1;
 }
-.dark-light-mode{
+/*.dark-light-mode{
     width: 10em;
     height: 5em;
     text-align: center;
     padding-top: 3em;
-}
+}*/
 .mode{
     font-size: 60px;
 }
@@ -50,10 +53,22 @@
 }
 .input-box{
     height: 50px;
-    border: 1px solid rgba(0,0,0,.125);
+    /*border: 1px solid rgba(0,0,0,.125);*/
     border-radius: 0.25rem;
     width: 100%;
+    /*border: rgba(0,0,0, 0.125);
+    border: solid 1px;*/
+    /*opacity: .125;*/
+    font-size: 2rem;
 }
 .input-div{
     margin-top: 0;
+    height: 50px;
+}
+.dark{
+    background-color: black;
+    color: white;
+    border: white;
+    border: solid 1px;
+    opacity: 1;
 }
